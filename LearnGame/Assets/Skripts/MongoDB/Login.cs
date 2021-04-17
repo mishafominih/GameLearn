@@ -20,6 +20,7 @@ public class Login : MonoBehaviour
             {
                 if(WorkMogoDb.SigIn(login.text, password.text))
                 {
+                    PlayerPrefs.SetString(playerNamePrefKey, login.text);
                     SceneManager.LoadScene("Main", LoadSceneMode.Single);
                 }
                 else
